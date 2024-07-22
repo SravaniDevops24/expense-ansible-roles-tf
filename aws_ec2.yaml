@@ -1,0 +1,16 @@
+plugin: amazon.aws.aws_ec2
+regions:
+- us-east-1
+keyed_groups:
+- key: tags['Name']
+  prefix: ''
+  parent_group: ''
+
+filters:
+  tag:Name: "backend*"
+
+compose:
+  # This sets the ansible_host variable to connect with private ip address without changing the host name
+  ansible_host: private_ip_address  
+
+
