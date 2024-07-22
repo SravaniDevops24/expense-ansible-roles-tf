@@ -3,6 +3,6 @@
   hosts: localhost
   connection: local
   vars_files:
-  - "variables- {{ environment }}.yaml"
+  - "variables-{{ environment }}.yaml"
   roles:
   - "{{ component }}"
